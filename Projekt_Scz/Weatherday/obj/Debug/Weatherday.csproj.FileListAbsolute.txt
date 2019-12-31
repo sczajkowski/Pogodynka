@@ -1,0 +1,9 @@
+C:\Users\Sebastian\Desktop\projekt_2020\Projekt_Scz\Weatherday\bin\Debug\Weatherday.exe.config
+C:\Users\Sebastian\Desktop\projekt_2020\Projekt_Scz\Weatherday\bin\Debug\Weatherday.exe
+C:\Users\Sebastian\Desktop\projekt_2020\Projekt_Scz\Weatherday\bin\Debug\Weatherday.pdb
+C:\Users\Sebastian\Desktop\projekt_2020\Projekt_Scz\Weatherday\obj\Debug\Weatherday.csprojAssemblyReference.cache
+C:\Users\Sebastian\Desktop\projekt_2020\Projekt_Scz\Weatherday\obj\Debug\Weatherday.Form1.resources
+C:\Users\Sebastian\Desktop\projekt_2020\Projekt_Scz\Weatherday\obj\Debug\Weatherday.Properties.Resources.resources
+C:\Users\Sebastian\Desktop\projekt_2020\Projekt_Scz\Weatherday\obj\Debug\Weatherday.csproj.GenerateResource.cache
+C:\Users\Sebastian\Desktop\projekt_2020\Projekt_Scz\Weatherday\obj\Debug\Weatherday.exe
+C:\Users\Sebastian\Desktop\projekt_2020\Projekt_Scz\Weatherday\obj\Debug\Weatherday.pdb
