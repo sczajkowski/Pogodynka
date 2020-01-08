@@ -7,3 +7,7 @@ C:\Users\Sebastian\Desktop\projekt_2020\Projekt_Scz\Weatherday\obj\Debug\Weather
 C:\Users\Sebastian\Desktop\projekt_2020\Projekt_Scz\Weatherday\obj\Debug\Weatherday.csproj.GenerateResource.cache
 C:\Users\Sebastian\Desktop\projekt_2020\Projekt_Scz\Weatherday\obj\Debug\Weatherday.exe
 C:\Users\Sebastian\Desktop\projekt_2020\Projekt_Scz\Weatherday\obj\Debug\Weatherday.pdb
+C:\Users\Sebastian\Desktop\projekt_2020\Projekt_Scz\Weatherday\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Sebastian\Desktop\projekt_2020\Projekt_Scz\Weatherday\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Sebastian\Desktop\projekt_2020\Projekt_Scz\Weatherday\obj\Debug\Weatherday.csproj.CopyComplete
+C:\Users\Sebastian\Desktop\projekt_2020\Projekt_Scz\Weatherday\bin\Debug\database.json
