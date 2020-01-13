@@ -5,11 +5,13 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Newtonsoft.Json;
-
+using RestEase;
+using Weatherday.Models;
 namespace Weatherday
 {
     public partial class Form1 : Form
@@ -21,7 +23,6 @@ namespace Weatherday
         }
         private void btnAdd_Click(object sender, EventArgs e)
         {
-
             var cityList = new List<City>();
 
             string name = tbxCity.Text;
@@ -65,40 +66,67 @@ namespace Weatherday
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            var cityList = new List<City>();
-            
-            foreach (var item in lbxCity.Items)
+            SaveFileDialog savefileDialog1 = new SaveFileDialog();
+            if (savefileDialog1.ShowDialog() == DialogResult.OK)
             {
-                cityList.Add(item as City);
+                using (Stream fileName = File.Open(savefileDialog1.FileName, FileMode.CreateNew)) 
+                using (StreamWriter streamWriter = new StreamWriter(fileName))
+                {
+                    var cityList = new List<City>();
+
+                    foreach (var item in lbxCity.Items)
+                    {
+                        cityList.Add(item as City);
+                    }
+
+                    var app2 = new App();
+                    app2.Cities = cityList;
+                    var app = JsonConvert.SerializeObject(app2);
+
+                    streamWriter.Write(app);
+                    streamWriter.Close();
+                    streamWriter.Dispose();
+                    MessageBox.Show("Saved", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
-            StreamWriter streamWriter = new StreamWriter("database.json");
-            var app2 = new App();
-            app2.Cities = cityList;
-            var app = JsonConvert.SerializeObject(app2);
-                
-            streamWriter.Write(app);
-            streamWriter.Close();
-            streamWriter.Dispose();
-            MessageBox.Show("Saved","Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //zapisują się w folderze bin
         }
 
         private void btnLoad_Click(object sender, EventArgs e)
         {
-            string path = Directory.GetCurrentDirectory();
-            path = path + "/bin/Debug/database.json";
-            StreamReader r = new StreamReader("database.json");
+            Stream fileStream = null;
 
-            var json = r.ReadToEnd();
-            var app = JsonConvert.DeserializeObject<App>(json);
-            r.Close();
-            r.Dispose();
-            var cities = app.Cities;
-
-            foreach(var item in cities)
+            if (openFileDialog1.ShowDialog() == DialogResult.OK && (fileStream = openFileDialog1.OpenFile()) != null)
             {
-                lbxCity.Items.Add(item as City);
-            }
+                string fileName = openFileDialog1.FileName;
+                using (fileStream)
+                {
+                    StreamReader r = new StreamReader(fileName);
+
+                    var json = r.ReadToEnd();
+                    var app = JsonConvert.DeserializeObject<App>(json);
+                    r.Close();
+                    r.Dispose();
+                    var cities = app.Cities;
+
+                    foreach (var item in cities)
+                    {
+                        lbxCity.Items.Add(item as City);
+                    }
+               }
+           }
+          
+        }
+
+        private void btnChk_Click(object sender, EventArgs e)
+        {
+            WebRequest request = HttpWebRequest.Create("http://api.openweathermap.org/data/2.5/weather?q="+tbxCity.Text+"&units=metric&appid=7a85ac809de323dd5c38e422ebce39df");
+            WebResponse response = request.GetResponse();
+            StreamReader reader = new StreamReader(response.GetResponseStream());
+
+            string weather_JSON = reader.ReadToEnd();
+            RootObject myWeather = Newtonsoft.Json.JsonConvert.DeserializeObject<RootObject>(weather_JSON);
+
+            MessageBox.Show(myWeather.ToString());
         }
     }
 }

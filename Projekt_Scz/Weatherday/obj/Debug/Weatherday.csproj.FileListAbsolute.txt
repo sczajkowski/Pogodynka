@@ -11,3 +11,5 @@ C:\Users\Sebastian\Desktop\projekt_2020\Projekt_Scz\Weatherday\bin\Debug\Newtons
 C:\Users\Sebastian\Desktop\projekt_2020\Projekt_Scz\Weatherday\bin\Debug\Newtonsoft.Json.xml
 C:\Users\Sebastian\Desktop\projekt_2020\Projekt_Scz\Weatherday\obj\Debug\Weatherday.csproj.CopyComplete
 C:\Users\Sebastian\Desktop\projekt_2020\Projekt_Scz\Weatherday\bin\Debug\database.json
+C:\Users\Sebastian\Desktop\projekt_2020\Projekt_Scz\Weatherday\bin\Debug\RestEase.dll
+C:\Users\Sebastian\Desktop\projekt_2020\Projekt_Scz\Weatherday\bin\Debug\RestEase.xml
