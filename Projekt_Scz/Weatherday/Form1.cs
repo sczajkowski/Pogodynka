@@ -47,6 +47,11 @@ namespace Weatherday
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
+            if (lbxCity.SelectedIndex == -1)
+            {
+                MessageBox.Show("Select data first", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             var data = lbxCity.SelectedItem as City;
             data.Name = tbxCity.Text;
             data.Country = tbxCountry.Text;
@@ -66,19 +71,23 @@ namespace Weatherday
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            var cityList = new List<City>();
+
+            foreach (var item in lbxCity.Items)
+            {
+                cityList.Add(item as City);
+            }
+            if (!cityList.Any()) {
+                MessageBox.Show("No data to save!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             SaveFileDialog savefileDialog1 = new SaveFileDialog();
             if (savefileDialog1.ShowDialog() == DialogResult.OK)
             {
-                using (Stream fileName = File.Open(savefileDialog1.FileName, FileMode.CreateNew)) 
+                savefileDialog1.FileName = savefileDialog1.FileName + ".json";
+                using (Stream fileName = File.Open(savefileDialog1.FileName, FileMode.CreateNew))
                 using (StreamWriter streamWriter = new StreamWriter(fileName))
                 {
-                    var cityList = new List<City>();
-
-                    foreach (var item in lbxCity.Items)
-                    {
-                        cityList.Add(item as City);
-                    }
-
                     var app2 = new App();
                     app2.Cities = cityList;
                     var app = JsonConvert.SerializeObject(app2);
@@ -98,6 +107,13 @@ namespace Weatherday
             if (openFileDialog1.ShowDialog() == DialogResult.OK && (fileStream = openFileDialog1.OpenFile()) != null)
             {
                 string fileName = openFileDialog1.FileName;
+                string chkString = fileName.Substring(fileName.Length - 4);
+                if (chkString != "json")
+                {
+                    MessageBox.Show("Valid File", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                
                 using (fileStream)
                 {
                     StreamReader r = new StreamReader(fileName);
@@ -119,14 +135,21 @@ namespace Weatherday
 
         private void btnChk_Click(object sender, EventArgs e)
         {
-            WebRequest request = HttpWebRequest.Create("http://api.openweathermap.org/data/2.5/weather?q="+tbxCity.Text+"&units=metric&appid=7a85ac809de323dd5c38e422ebce39df");
-            WebResponse response = request.GetResponse();
-            StreamReader reader = new StreamReader(response.GetResponseStream());
+            try
+            {
+                WebRequest request = HttpWebRequest.Create("http://api.openweathermap.org/data/2.5/weather?q=" + tbxCity.Text + "&units=metric&appid=7a85ac809de323dd5c38e422ebce39df");
+                WebResponse response = request.GetResponse();
+                StreamReader reader = new StreamReader(response.GetResponseStream());
 
-            string weather_JSON = reader.ReadToEnd();
-            RootObject myWeather = Newtonsoft.Json.JsonConvert.DeserializeObject<RootObject>(weather_JSON);
+                string weather_JSON = reader.ReadToEnd();
+                RootObject myWeather = Newtonsoft.Json.JsonConvert.DeserializeObject<RootObject>(weather_JSON);
 
-            MessageBox.Show(myWeather.ToString());
+                MessageBox.Show(myWeather.ToString(),"Status", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch(WebException)
+            {
+                MessageBox.Show($"{tbxCity.Text} it's not a city!","Error" ,MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
