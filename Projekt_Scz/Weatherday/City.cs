@@ -14,7 +14,7 @@ namespace Weatherday
 
         public override string ToString()
         {
-             return $"Miasto : {Name}, Kraj : {Country}";
+             return $"{Name}, {Country}";
         }
       
         public City(string country,string name)

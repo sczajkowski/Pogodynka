@@ -20,11 +20,5 @@ namespace Weatherday.Models
         public int id { get; set; }
         public string name { get; set; }
         public int cod { get; set; }
-
-        public override string ToString()
-        {
-
-            return $"Today is {main.temp.ToString()} Celsius, with wind up to {wind.speed.ToString()} kilometers";
-        }
     }
 }
