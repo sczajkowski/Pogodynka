@@ -23,7 +23,7 @@ namespace Weatherday
         }
         private void BtnAdd_Click(object sender, EventArgs e)
         {
-            var cityList = new List<City>();
+            _ = new List<City>();
 
             string name = tbxCity.Text;
             string country = tbxCountry.Text;
@@ -96,19 +96,19 @@ namespace Weatherday
             SaveFileDialog savefileDialog1 = new SaveFileDialog();
             if (savefileDialog1.ShowDialog() == DialogResult.OK)
             {
-                savefileDialog1.FileName = savefileDialog1.FileName + ".json";
-                using (Stream fileName = File.Open(savefileDialog1.FileName, FileMode.CreateNew))
-                using (StreamWriter streamWriter = new StreamWriter(fileName))
+                savefileDialog1.FileName += ".json";
+                using Stream fileName = File.Open(savefileDialog1.FileName, FileMode.CreateNew);
+                using StreamWriter streamWriter = new StreamWriter(fileName);
+                var app2 = new App
                 {
-                    var app2 = new App();
-                    app2.Cities = cityList;
-                    var app = JsonConvert.SerializeObject(app2);
+                    Cities = cityList
+                };
+                var app = JsonConvert.SerializeObject(app2);
 
-                    streamWriter.Write(app);
-                    streamWriter.Close();
-                    streamWriter.Dispose();
-                    MessageBox.Show("Saved", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
+                streamWriter.Write(app);
+                streamWriter.Close();
+                streamWriter.Dispose();
+                MessageBox.Show("Saved", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -128,8 +128,8 @@ namespace Weatherday
                 using (fileStream)
                 {
                     StreamReader r = new StreamReader(fileName);
-                    try
-                    {
+                   // try
+                  //  {
                         var json = r.ReadToEnd();
                         var app = JsonConvert.DeserializeObject<App>(json);
                         r.Close();
@@ -140,12 +140,12 @@ namespace Weatherday
                         {
                             lbxCity.Items.Add(item as City);
                         }
-                    }
+                  /*  }
                     catch
                     {
                         MessageBox.Show("This file is not database", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
-                    }
+                    }*/
                }
            }
           
@@ -242,6 +242,12 @@ namespace Weatherday
                 checkBoxSset.Checked = false;
                 checkBoxWind.Checked = false;
             }
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            tbxCity.Text = null;
+            tbxCountry.Text = null;
         }
     }
 }

@@ -48,3 +48,11 @@ C:\Users\Sebastian\Desktop\sebczaj-projekt_2020-6110c3529f9e — kopia\Projekt_S
 C:\Users\Sebastian\Desktop\sebczaj-projekt_2020-6110c3529f9e — kopia\Projekt_Scz\Weatherday\obj\Debug\Weatherday.csproj.CopyComplete
 C:\Users\Sebastian\Desktop\sebczaj-projekt_2020-6110c3529f9e — kopia\Projekt_Scz\Weatherday\obj\Debug\Weatherday.exe
 C:\Users\Sebastian\Desktop\sebczaj-projekt_2020-6110c3529f9e — kopia\Projekt_Scz\Weatherday\obj\Debug\Weatherday.pdb
+C:\Users\Sebastian\Desktop\projekt_2020\Projekt_Scz\Weatherday\bin\Debug\xunit.abstractions.dll
+C:\Users\Sebastian\Desktop\projekt_2020\Projekt_Scz\Weatherday\bin\Debug\xunit.assert.dll
+C:\Users\Sebastian\Desktop\projekt_2020\Projekt_Scz\Weatherday\bin\Debug\xunit.core.dll
+C:\Users\Sebastian\Desktop\projekt_2020\Projekt_Scz\Weatherday\bin\Debug\xunit.execution.desktop.dll
+C:\Users\Sebastian\Desktop\projekt_2020\Projekt_Scz\Weatherday\bin\Debug\xunit.abstractions.xml
+C:\Users\Sebastian\Desktop\projekt_2020\Projekt_Scz\Weatherday\bin\Debug\xunit.assert.xml
+C:\Users\Sebastian\Desktop\projekt_2020\Projekt_Scz\Weatherday\bin\Debug\xunit.core.xml
+C:\Users\Sebastian\Desktop\projekt_2020\Projekt_Scz\Weatherday\bin\Debug\xunit.execution.desktop.xml

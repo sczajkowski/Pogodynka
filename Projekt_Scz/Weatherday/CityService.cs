@@ -8,7 +8,7 @@ namespace Weatherday
 {
     public class CityService
     {
-        private List<City> cityList = new List<City>();
+        private readonly List<City> cityList = new List<City>();
         public IReadOnlyCollection<City> CityList => cityList;
 
         public void AddCity(City c)

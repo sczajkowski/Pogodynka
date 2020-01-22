@@ -53,6 +53,7 @@
             this.checkBoxTemp = new System.Windows.Forms.CheckBox();
             this.chkAll = new System.Windows.Forms.CheckBox();
             this.chkCapitol = new System.Windows.Forms.CheckBox();
+            this.btnClear = new System.Windows.Forms.Button();
             this.grpBox.SuspendLayout();
             this.grpBoxData.SuspendLayout();
             this.SuspendLayout();
@@ -293,11 +294,22 @@
             this.chkCapitol.Text = "Capitol City";
             this.chkCapitol.UseVisualStyleBackColor = true;
             // 
+            // btnClear
+            // 
+            this.btnClear.Location = new System.Drawing.Point(353, 80);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(100, 23);
+            this.btnClear.TabIndex = 19;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(565, 288);
+            this.Controls.Add(this.btnClear);
             this.Controls.Add(this.chkCapitol);
             this.Controls.Add(this.chkAll);
             this.Controls.Add(this.grpBoxData);
@@ -351,6 +363,7 @@
         private System.Windows.Forms.CheckBox checkBoxTemp;
         private System.Windows.Forms.CheckBox chkAll;
         private System.Windows.Forms.CheckBox chkCapitol;
+        private System.Windows.Forms.Button btnClear;
     }
 }
 

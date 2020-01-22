@@ -28,11 +28,5 @@ namespace Weatherday
             this.Country = country;
             this.Name = name;
         }
-        public City(string name)
-        {
-            this.Id = new Guid();
-            this.Country = null;
-            this.Name = name;
-        }
     }
 }
