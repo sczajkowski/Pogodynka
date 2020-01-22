@@ -1,0 +1,93 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Sebastian\\Desktop\\sebczaj-projekt_2020-6110c3529f9e — kopia\\Projekt_Scz\\Weatherday.Test\\Weatherday.Test.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Sebastian\\Desktop\\sebczaj-projekt_2020-6110c3529f9e — kopia\\Projekt_Scz\\Weatherday.Test\\Weatherday.Test.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Sebastian\\Desktop\\sebczaj-projekt_2020-6110c3529f9e — kopia\\Projekt_Scz\\Weatherday.Test\\Weatherday.Test.csproj",
+        "projectName": "Weatherday.Test",
+        "projectPath": "C:\\Users\\Sebastian\\Desktop\\sebczaj-projekt_2020-6110c3529f9e — kopia\\Projekt_Scz\\Weatherday.Test\\Weatherday.Test.csproj",
+        "packagesPath": "C:\\Users\\Sebastian\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Sebastian\\Desktop\\sebczaj-projekt_2020-6110c3529f9e — kopia\\Projekt_Scz\\Weatherday.Test\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Sebastian\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.0": {
+            "projectReferences": {
+              "C:\\Users\\Sebastian\\Desktop\\sebczaj-projekt_2020-6110c3529f9e — kopia\\Projekt_Scz\\Weatherday\\Weatherday.csproj": {
+                "projectPath": "C:\\Users\\Sebastian\\Desktop\\sebczaj-projekt_2020-6110c3529f9e — kopia\\Projekt_Scz\\Weatherday\\Weatherday.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.0": {
+          "dependencies": {
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[16.2.0, )"
+            },
+            "coverlet.collector": {
+              "target": "Package",
+              "version": "[1.0.1, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.4.1, )"
+            },
+            "xunit.runner.visualstudio": {
+              "target": "Package",
+              "version": "[2.4.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Sebastian\\Desktop\\sebczaj-projekt_2020-6110c3529f9e — kopia\\Projekt_Scz\\Weatherday\\Weatherday.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Sebastian\\Desktop\\sebczaj-projekt_2020-6110c3529f9e — kopia\\Projekt_Scz\\Weatherday\\Weatherday.csproj",
+        "projectName": "Weatherday",
+        "projectPath": "C:\\Users\\Sebastian\\Desktop\\sebczaj-projekt_2020-6110c3529f9e — kopia\\Projekt_Scz\\Weatherday\\Weatherday.csproj"
+      },
+      "frameworks": {
+        "net48": {}
+      }
+    }
+  }
+}

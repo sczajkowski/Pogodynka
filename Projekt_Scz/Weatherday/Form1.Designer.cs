@@ -52,6 +52,7 @@
             this.checkBoxWind = new System.Windows.Forms.CheckBox();
             this.checkBoxTemp = new System.Windows.Forms.CheckBox();
             this.chkAll = new System.Windows.Forms.CheckBox();
+            this.chkCapitol = new System.Windows.Forms.CheckBox();
             this.grpBox.SuspendLayout();
             this.grpBoxData.SuspendLayout();
             this.SuspendLayout();
@@ -64,7 +65,7 @@
             this.btnSave.TabIndex = 0;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // btnEdit
             // 
@@ -74,7 +75,7 @@
             this.btnEdit.TabIndex = 1;
             this.btnEdit.Text = "Edit";
             this.btnEdit.UseVisualStyleBackColor = true;
-            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            this.btnEdit.Click += new System.EventHandler(this.BtnEdit_Click);
             // 
             // btnAdd
             // 
@@ -84,7 +85,7 @@
             this.btnAdd.TabIndex = 2;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            this.btnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
             // 
             // btnDel
             // 
@@ -94,7 +95,7 @@
             this.btnDel.TabIndex = 3;
             this.btnDel.Text = "Delete";
             this.btnDel.UseVisualStyleBackColor = true;
-            this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
+            this.btnDel.Click += new System.EventHandler(this.BtnDel_Click);
             // 
             // btnChk
             // 
@@ -104,12 +105,12 @@
             this.btnChk.TabIndex = 4;
             this.btnChk.Text = "Check Weather";
             this.btnChk.UseVisualStyleBackColor = true;
-            this.btnChk.Click += new System.EventHandler(this.btnChk_Click);
+            this.btnChk.Click += new System.EventHandler(this.BtnChk_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(404, 42);
+            this.label2.Location = new System.Drawing.Point(304, 49);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(43, 13);
             this.label2.TabIndex = 6;
@@ -118,7 +119,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(413, 16);
+            this.label3.Location = new System.Drawing.Point(313, 11);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(24, 13);
             this.label3.TabIndex = 7;
@@ -126,14 +127,14 @@
             // 
             // tbxCountry
             // 
-            this.tbxCountry.Location = new System.Drawing.Point(453, 42);
+            this.tbxCountry.Location = new System.Drawing.Point(353, 49);
             this.tbxCountry.Name = "tbxCountry";
             this.tbxCountry.Size = new System.Drawing.Size(100, 20);
             this.tbxCountry.TabIndex = 9;
             // 
             // tbxCity
             // 
-            this.tbxCity.Location = new System.Drawing.Point(453, 16);
+            this.tbxCity.Location = new System.Drawing.Point(353, 11);
             this.tbxCity.Name = "tbxCity";
             this.tbxCity.Size = new System.Drawing.Size(100, 20);
             this.tbxCity.TabIndex = 10;
@@ -145,7 +146,7 @@
             this.lbxCity.Name = "lbxCity";
             this.lbxCity.Size = new System.Drawing.Size(275, 264);
             this.lbxCity.TabIndex = 11;
-            this.lbxCity.Click += new System.EventHandler(this.lbxCity_Click);
+            this.lbxCity.Click += new System.EventHandler(this.LbxCity_Click);
             // 
             // btnLoad
             // 
@@ -155,7 +156,7 @@
             this.btnLoad.TabIndex = 12;
             this.btnLoad.Text = "Load Data";
             this.btnLoad.UseVisualStyleBackColor = true;
-            this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
+            this.btnLoad.Click += new System.EventHandler(this.BtnLoad_Click);
             // 
             // openFileDialog1
             // 
@@ -280,13 +281,24 @@
             this.chkAll.TabIndex = 17;
             this.chkAll.Text = "Select All";
             this.chkAll.UseVisualStyleBackColor = true;
-            this.chkAll.CheckedChanged += new System.EventHandler(this.chkAll_CheckedChanged);
+            this.chkAll.CheckedChanged += new System.EventHandler(this.ChkAll_CheckedChanged);
+            // 
+            // chkCapitol
+            // 
+            this.chkCapitol.AutoSize = true;
+            this.chkCapitol.Location = new System.Drawing.Point(470, 14);
+            this.chkCapitol.Name = "chkCapitol";
+            this.chkCapitol.Size = new System.Drawing.Size(78, 17);
+            this.chkCapitol.TabIndex = 18;
+            this.chkCapitol.Text = "Capitol City";
+            this.chkCapitol.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(565, 288);
+            this.Controls.Add(this.chkCapitol);
             this.Controls.Add(this.chkAll);
             this.Controls.Add(this.grpBoxData);
             this.Controls.Add(this.grpBox);
@@ -338,6 +350,7 @@
         private System.Windows.Forms.CheckBox checkBoxWind;
         private System.Windows.Forms.CheckBox checkBoxTemp;
         private System.Windows.Forms.CheckBox chkAll;
+        private System.Windows.Forms.CheckBox chkCapitol;
     }
 }
 

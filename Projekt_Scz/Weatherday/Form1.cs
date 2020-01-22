@@ -21,21 +21,33 @@ namespace Weatherday
         {
             InitializeComponent();
         }
-        private void btnAdd_Click(object sender, EventArgs e)
+        private void BtnAdd_Click(object sender, EventArgs e)
         {
             var cityList = new List<City>();
 
             string name = tbxCity.Text;
             string country = tbxCountry.Text;
-            if (string.IsNullOrEmpty(name) || string.IsNullOrEmpty(country))
+
+            if (chkCapitol.Checked)
             {
-                MessageBox.Show("Fill data", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                lbxCity.Items.Add(new CapitolCity(country, name));
                 return;
             }
-            lbxCity.Items.Add(new City(country,name));
+            var ncity = new CityService();
+            var tcity = new City(country, name);
+            try
+            {
+                ncity.Validate(tcity);
+            }
+            catch
+            {
+                MessageBox.Show("Error", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            lbxCity.Items.Add(tcity);
         }
 
-        private void btnDel_Click(object sender, EventArgs e)
+        private void BtnDel_Click(object sender, EventArgs e)
         {
             if (lbxCity.SelectedIndex == -1)
             {
@@ -45,7 +57,7 @@ namespace Weatherday
             lbxCity.Items.RemoveAt(lbxCity.SelectedIndex);
         }
 
-        private void btnEdit_Click(object sender, EventArgs e)
+        private void BtnEdit_Click(object sender, EventArgs e)
         {
             if (lbxCity.SelectedIndex == -1)
             {
@@ -58,7 +70,7 @@ namespace Weatherday
             lbxCity.Items[lbxCity.SelectedIndex] = data as City;
         }
 
-        private void lbxCity_Click(object sender, EventArgs e)
+        private void LbxCity_Click(object sender, EventArgs e)
         {
             if (lbxCity.SelectedIndex == -1)
             {
@@ -69,7 +81,7 @@ namespace Weatherday
             tbxCountry.Text = item.Country;
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        private void BtnSave_Click(object sender, EventArgs e)
         {
             var cityList = new List<City>();
 
@@ -100,10 +112,9 @@ namespace Weatherday
             }
         }
 
-        private void btnLoad_Click(object sender, EventArgs e)
+        private void BtnLoad_Click(object sender, EventArgs e)
         {
-            Stream fileStream = null;
-
+            Stream fileStream;
             if (openFileDialog1.ShowDialog() == DialogResult.OK && (fileStream = openFileDialog1.OpenFile()) != null)
             {
                 string fileName = openFileDialog1.FileName;
@@ -140,7 +151,7 @@ namespace Weatherday
           
         }
 
-        private void btnChk_Click(object sender, EventArgs e)
+        private void BtnChk_Click(object sender, EventArgs e)
         {
             if (lbxCity.SelectedIndex == -1)
             {
@@ -212,7 +223,7 @@ namespace Weatherday
             return dtDateTime;
         }
 
-        private void chkAll_CheckedChanged(object sender, EventArgs e)
+        private void ChkAll_CheckedChanged(object sender, EventArgs e)
         {
             if (chkAll.Checked == true)
             {
