@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Sebastian\\Desktop\\projekt_2020\\Projekt_Scz\\Weatherday.Test\\Weatherday.Test.csproj": {}
+    "C:\\Users\\Sebastian\\Desktop\\Pogodynka\\Projekt_Scz\\Weatherday.Test\\Weatherday.Test.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Sebastian\\Desktop\\projekt_2020\\Projekt_Scz\\Weatherday.Test\\Weatherday.Test.csproj": {
+    "C:\\Users\\Sebastian\\Desktop\\Pogodynka\\Projekt_Scz\\Weatherday.Test\\Weatherday.Test.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Sebastian\\Desktop\\projekt_2020\\Projekt_Scz\\Weatherday.Test\\Weatherday.Test.csproj",
+        "projectUniqueName": "C:\\Users\\Sebastian\\Desktop\\Pogodynka\\Projekt_Scz\\Weatherday.Test\\Weatherday.Test.csproj",
         "projectName": "Weatherday.Test",
-        "projectPath": "C:\\Users\\Sebastian\\Desktop\\projekt_2020\\Projekt_Scz\\Weatherday.Test\\Weatherday.Test.csproj",
+        "projectPath": "C:\\Users\\Sebastian\\Desktop\\Pogodynka\\Projekt_Scz\\Weatherday.Test\\Weatherday.Test.csproj",
         "packagesPath": "C:\\Users\\Sebastian\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Sebastian\\Desktop\\projekt_2020\\Projekt_Scz\\Weatherday.Test\\obj\\",
+        "outputPath": "C:\\Users\\Sebastian\\Desktop\\Pogodynka\\Projekt_Scz\\Weatherday.Test\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Sebastian\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -27,8 +27,8 @@
         "frameworks": {
           "netcoreapp3.0": {
             "projectReferences": {
-              "C:\\Users\\Sebastian\\Desktop\\projekt_2020\\Projekt_Scz\\Weatherday\\Weatherday.csproj": {
-                "projectPath": "C:\\Users\\Sebastian\\Desktop\\projekt_2020\\Projekt_Scz\\Weatherday\\Weatherday.csproj"
+              "C:\\Users\\Sebastian\\Desktop\\Pogodynka\\Projekt_Scz\\Weatherday\\Weatherday.csproj": {
+                "projectPath": "C:\\Users\\Sebastian\\Desktop\\Pogodynka\\Projekt_Scz\\Weatherday\\Weatherday.csproj"
               }
             }
           }
@@ -69,21 +69,34 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.0.1, 3.0.1]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[3.0.0, 3.0.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[3.0.0, 3.0.0]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Sebastian\\Desktop\\projekt_2020\\Projekt_Scz\\Weatherday\\Weatherday.csproj": {
-      "version": "1.0.0",
+    "C:\\Users\\Sebastian\\Desktop\\Pogodynka\\Projekt_Scz\\Weatherday\\Weatherday.csproj": {
       "restore": {
-        "projectUniqueName": "C:\\Users\\Sebastian\\Desktop\\projekt_2020\\Projekt_Scz\\Weatherday\\Weatherday.csproj",
+        "projectUniqueName": "C:\\Users\\Sebastian\\Desktop\\Pogodynka\\Projekt_Scz\\Weatherday\\Weatherday.csproj",
         "projectName": "Weatherday",
-        "projectPath": "C:\\Users\\Sebastian\\Desktop\\projekt_2020\\Projekt_Scz\\Weatherday\\Weatherday.csproj"
+        "projectPath": "C:\\Users\\Sebastian\\Desktop\\Pogodynka\\Projekt_Scz\\Weatherday\\Weatherday.csproj"
       },
       "frameworks": {
         "net48": {}

@@ -128,8 +128,8 @@ namespace Weatherday
                 using (fileStream)
                 {
                     StreamReader r = new StreamReader(fileName);
-                   // try
-                  //  {
+                    try
+                    {
                         var json = r.ReadToEnd();
                         var app = JsonConvert.DeserializeObject<App>(json);
                         r.Close();
@@ -140,12 +140,12 @@ namespace Weatherday
                         {
                             lbxCity.Items.Add(item as City);
                         }
-                  /*  }
+                    }
                     catch
                     {
                         MessageBox.Show("This file is not database", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
-                    }*/
+                    }
                }
            }
           
